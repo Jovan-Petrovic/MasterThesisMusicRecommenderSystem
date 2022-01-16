@@ -3,7 +3,7 @@ import librosa
 import math
 import json
 
-DATASET_PATH = "C:/Users/proudsourceit/Desktop/MasterRad/Datasets/fma_small_by_genre_wav"
+DATASET_PATH = "C:/Users/proudsourceit/Desktop/MasterRad/Datasets/Derived/fma_small_by_genre_wav"
 JSON_PATH = "data/data.json"
 
 SAMPLE_RATE = 22050

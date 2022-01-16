@@ -69,8 +69,8 @@ def prepare_datasets(test_size, validation_size):
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=test_size)
     X_train, X_validation, y_train, y_validation = train_test_split(X_train, y_train, test_size=validation_size)
 
-    # add an axis to input sets
-    X_train = X_train[..., np.newaxis]
+    # add an axis to input sets (CNN expect 3d input)
+    X_train = X_train[..., np.newaxis] # 4d array -? (num_samples, 125, 13, 1)
     X_validation = X_validation[..., np.newaxis]
     X_test = X_test[..., np.newaxis]
 
