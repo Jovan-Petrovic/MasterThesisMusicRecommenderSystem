@@ -23,8 +23,8 @@ plt.ylabel("Magnitude")
 plt.show()
 
 # stft -> spectogram
-n_fft = 2048
-hop_length = 512
+n_fft = 2048    # window that we are considering when performing single fast fourier transform
+hop_length = 512    # amount we are shifting each fourier transform to right
 stft = librosa.core.stft(signal, hop_length=hop_length, n_fft=n_fft)
 spectogram = np.abs(stft)
 log_spectogram = librosa.amplitude_to_db(spectogram)
